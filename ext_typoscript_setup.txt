@@ -1,0 +1,20 @@
+config.tx_extbase {
+    persistence {
+        classes {
+            Schmitzal\Way2Enjoy\Domain\Model\FileStorage {
+                mapping {
+                    tableName = sys_file_storage
+                }
+            }
+            Schmitzal\Way2Enjoy\Domain\Model\File {
+                mapping {
+                    tableName = sys_file
+                }
+            }
+        }
+    }
+}
+
+module.tx_filelist.view {
+    templateRootPaths.0 = EXT:way2Enjoy/Resources/Private/Templates/
+}

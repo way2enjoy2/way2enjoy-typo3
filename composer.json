@@ -1,0 +1,48 @@
+{
+    "name": "schmitzal/way2Enjoy",
+    "description": "Image compression for all pngs and jpgs uploaded to the backend (using the way2enjoy API)",
+    "type": "typo3-cms-extension",
+    "keywords": [
+        "image",
+        "compression",
+        "tinypng",
+        "tinyjpg",
+        "way2enjoy"
+    ],
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "james",
+            "role": "Developer",
+            "homepage": "https://way2enjoy.com/"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/way2enjoy2/way2Enjoy-typo3/issues"
+    },
+    "require": {
+        "typo3/cms-core": "^7.6.0 || ^8.7.0 || ^9.5.0",
+        "way2enjoy/way2enjoy": "^1.5"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "~2.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Schmitzal\\Way2Enjoy\\": "Classes"
+        }
+    },
+    "replace": {
+        "way2Enjoy": "self.version",
+        "typo3-ter/way2Enjoy": "self.version"
+    },
+    "extra": {
+        "typo3/cms": {
+            "cms-package-dir": ".Build/typo3/cms",
+            "web-dir": ".Build/Web",
+            "Package": {
+                "partOfMinimalUsableSystem": true
+            }
+        }
+    }
+}
